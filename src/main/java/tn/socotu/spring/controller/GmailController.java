@@ -1,21 +1,16 @@
 package tn.socotu.spring.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tn.socotu.spring.entities.Enregistrement;
 import tn.socotu.spring.repository.RemboursementRepository;
 import tn.socotu.spring.service.GmailService;
 import tn.socotu.spring.service.RemboursementService;

@@ -80,30 +80,37 @@
 			<version>2.4</version>
 		</dependency>
 		
-		<dependency>
-			<groupId>eclipse</groupId>
-			<artifactId>jdtcore</artifactId>
-			<version>3.1.0</version>
-			<scope>compile</scope>
-		</dependency>
 		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
 		
 
 	</dependencies>
 
-	<build>
+		<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				
 			</plugin>
+<plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-compiler-plugin</artifactId>
+         <version>3.5.1</version>
+         <configuration>
+         <fork>true</fork>
+				<executable>C:\Program Files\Java\jdk1.8.0_261\bin\javac</executable>
+             <source>1.8</source>
+             <target>1.8</target>
+         </configuration>
+     </plugin>
+				
 		</plugins>
 	</build>
+	<distributionManagement>
+    <repository>
+      <id>deploymentRepo</id>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
 
 </project>
